@@ -1,0 +1,43 @@
+$DarkBlue: hsl(233, 26%, 24%);
+$lightGreen: hsl(159, 48%, 55%);
+$darkGreen: hsl(182, 66%, 46%);
+
+.header {
+    height: 60px;
+}
+
+.subMenu {
+    background-color: $DarkBlue;
+    position: absolute;
+    
+    right: 0;
+    left: -100%;
+    top: 60px;
+    z-index: 99;
+
+    &.open {
+        left: 0;
+    }
+
+    .subButton {
+        background: linear-gradient(to left, $lightGreen, $darkGreen);
+    }
+}
+
+@media (min-width: 768px) {
+    .subMenu {
+        background-color: transparent;
+        width: auto;
+        position: static;
+
+        &.open {
+                max-height: auto;
+                opacity: 1;
+            }
+        
+            &.close {
+                max-height: auto;
+                opacity: 1;
+            }
+    }
+}

@@ -1,0 +1,31 @@
+$lightGreen: hsl(159, 48%, 55%);
+$darkGreen: hsl(182, 66%, 46%);
+
+.cta {
+    background: linear-gradient(to left, $lightGreen, $darkGreen);
+}
+
+.mockupContainer {
+    background-image: url("../../assets/bg-intro-mobile.svg");
+    background-size: cover;
+    background-position: right;
+    min-height: 30vh;
+}
+
+.mockup {
+    left: 1rem;
+    right: 2rem;
+    top: -11rem;
+}
+
+@media (min-width: 768px) {
+    .mockupContainer {
+        // background-image: url("../../assets/bg-intro-desktop.svg");
+    }
+    .mockup {
+        top: -10rem;
+        width: 70%;
+        right: -6rem;
+        left: unset;
+    }
+}
